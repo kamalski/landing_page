@@ -2,34 +2,80 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Prelaunch Signup" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Prelaunch Signup" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Gigturn - A new way for DJs to get gigs" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Gigturn" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "wbpreview.com/previews/WB08790F0/css/bootstrap.css", :media => "all" %>
+    <%= stylesheet_link_tag "wbpreview.com/previews/WB08790F0/css/font-awesome.css", :media => "all" %>
+    <%= stylesheet_link_tag "theme.css.scss", :media => "all" %>
+    <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Patua+One", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    <link rel="shortcut icon" href="favicon.ico">
     <%= yield(:head) %>
+    <!-- Call to Action Strip -->
+    <section class="strip">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+             <a href="/" class="pull-left"><img alt="" src="/home_logo.png" /></a>
+            <h3>You better be ready to say goodbye to you used to get gigs <a class="btn" href="#request-invite">Request Invite <i class="icon icon-caret-right"></i></a></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Showcase -->
+    <div class="showcase">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <header class="js-animated">
+           <%= image_tag("logo_orange.png", :alt => "rss feed") %>
+              <h1>Gigturn</h1>
+              <p class="description">- Reinventing how DJ get gigs -</p>
+            </header>
+          </div>
+        </div>
+      </div>
+    </div>
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
-    </header>
     <div id="main" role="main">
       <div class="container">
         <div class="content">
            <div class="row">
             <div class="span12">
               <%= render 'layouts/messages' %>
-              <%= yield %>
             </div>
           </div>
+          <%= yield %>
           <footer>
-          </footer>
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <p>&copy; 2013 <a href="http://twitter.com/gigturn">@Gigturn</a></p>
+          </div>
         </div>
-      </div> <!--! end of .container -->
-    </div> <!--! end of #main -->
+      </div>
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // fancy animation - fade out header content on page scroll
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 10) {
+            $('.js-animated').stop().animate({opacity: 0}, 200);
+          }
+          if ($(this).scrollTop() < 10) {
+            $('.js-animated').stop().animate({opacity: 1}, 500);
+          }
+        });
+        //bootstrap tooltip trigger
+        $('[rel="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>

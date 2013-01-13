@@ -1,5 +1,5 @@
 <div id="request-invite" class="modal" style="display: <%= @user.errors.any? ? 'block' : 'none';%>">
-  <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name) , :html => {:class => 'form-horizontal' } do |f| %>
+  <%= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-horizontal' } do |f| %>
     <div class="modal-header">
       <a class="close" data-dismiss="modal">&#215;</a>
       <h3>Request Invitation</h3>
@@ -14,9 +14,127 @@
     </div>
   <% end %>
 </div>
-<div id="romance-copy" style="text-align: center; margin-top: 80px">
-  <h2>Want in?</h2>
-</div>
 <div id="call-to-action" style="text-align: center; margin-top: 80px">
   <a class="btn btn-primary btn-large" data-toggle="modal" href="#request-invite">Request invite</a>
 </div>
+<!-- Page Container -->
+    <div class="container">
+
+      <!-- Features Grid-->
+      <div class="row">
+        <div class="span3">
+          <h4><i class="icon icon-beaker"></i> Latest technologies</h4>
+          <p>Well it’s taken a lot of effort, and I’ve learnt a fair bit <a href="#" rel="tooltip" title="Right away!">on the way</a>, but my blog is finally live! It’ll have all the useful things I make.</p>
+        </div>
+        <div class="span3">
+          <h4><i class="icon icon-credit-card"></i> Built-in E-commerce</h4>
+          <p>Over the past few weeks I’ve been playing around with using display: inline-block instead of float: left to create things like horizontal lists.</p>
+        </div>
+        <div class="span3">
+          <h4><i class="icon icon-truck"></i> Free fast delivery</h4>
+          <p>Grown a lot in the last 3 years, with offices opening around the world and a quickly growing team of passionate creators, we are reinventing.</p>
+        </div>
+        <div class="span3">
+          <h4><i class="icon icon-globe"></i> World Wide Web</h4>
+          <p>This September we are re-launching Playground with a vision to change the way our industry thinks and works, sparking the next great revolution.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Info Row 1 -->
+      <div class="row">
+        <div class="span3">
+          <img class="img-rounded" src="wbpreview.com/previews/WB08790F0/assets/product-4.png" alt="">
+        </div>
+        <div class="span9">
+          <h3>Brand New Features</h3>
+          <p>Easy to learn. Flexible to use. Create truly modern product support with visually-engaging guides that are available to anyone on any device. Connect your community through project documentation. Allow everyone to help out while recognizing the most valuable contributors. Improve employee training with <a href="#" rel="tooltip" title="HTML5 & CSS3">cutting-edge</a> work instructions that improve production quality while reducing human errors and cycle times.</p>
+          <p>Create truly modern product support with visually-engaging guides that are available to anyone on any device. Connect your community through project documentation. Allow everyone to help out while recognizing the most valuable contributors. Improve employee training with cutting-edge work instructions that improve production quality while reducing human errors and cycle times.</p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Info Row 2 -->
+      <div class="row">
+        <div class="span4">
+          <h3>Feature Rich Interface</h3>
+          <p>Guidebook is opinionated. We believe that how-to instructions should be broken into steps. Textual instructions alone aren't good enough—each step must also have photos in a consistent aspect ratio (4:3, the native aspect ratio of consumer digital cameras). People work best when they're given a framework that inspires creativity.</p>
+          <a href="#" class="btn">View Interface</a>
+        </div>
+        <div class="span4">
+          <h3>Fully Customizable</h3>
+          <p>Wikis are useful. Unfortunately, most wikis are difficult to use and harder to organize. Unstructured documentation leads to organizational chaos and inconsistent formatting. Guidebook's elegant presentation makes your content look good from day one. Consistent layouts present instructions clearly—<a href="#" rel="tooltip" title="We mean it">on every page</a>.</p>
+          <a href="#" class="btn">Try The Demo</a>
+        </div>
+        <div class="span4">
+          <img class="img-rounded" src="wbpreview.com/previews/WB08790F0/assets/product-3.png" alt="">
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Testimonials -->
+      <div class="row">
+        <!-- Testimony 1 -->
+        <div class="span4">
+          <h3>Excelent Service</h3>
+          <div class="bubble">
+            <p><i class="icon-comments-alt"></i> For every dollar my company invests to increase usability, I receives $10-$100 in benefits</p>
+          </div>
+          <img class="user-avatar" src="wbpreview.com/previews/WB08790F0/assets/user-1.png" alt="">
+          <blockquote>
+            <p>Cooper Black</p>
+            <small>Chief CEO in <cite title="Source Title">Venture Corp.</cite></small>
+          </blockquote>
+        </div>
+        <!-- Testimony 2 -->
+        <div class="span4">
+          <h3>Priority Support</h3>
+          <div class="bubble">
+            <p><i class="icon-comments-alt"></i> Testing one user early in the project is better than testing 50 near the end.</p>
+          </div>
+          <img class="user-avatar" src="wbpreview.com/previews/WB08790F0/assets/user-2.png" alt="">
+          <blockquote>
+            <p>Calisto MT</p>
+            <small>President in <cite title="Source Title">Asturias Inc.</cite></small>
+          </blockquote>
+        </div>
+        <!-- Testimony 3 -->
+        <div class="span4">
+          <h3>First Class Work</h3>
+          <div class="bubble">
+            <p><i class="icon-comments-alt"></i> The difference between zero and even a little bit of data is astounding.</p>
+          </div>
+          <img class="user-avatar" src="wbpreview.com/previews/WB08790F0/assets/user-3.png" alt="">
+          <blockquote>
+            <p>Cambria Serif</p>
+            <small>Design Manager in <cite title="Source Title">Moldova Systems</cite></small>
+          </blockquote>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Clients List -->
+      <div class="row">
+        <div class="span12">
+          <h3>Our Awesome Clients</h3>
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-1.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-2.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-3.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-11.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-12.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-6.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-7.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-8.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-9.png" alt="">
+          <img class="customer-logo" src="wbpreview.com/previews/WB08790F0/assets/logo-10.png" alt="">
+        </div>
+      </div>
+
+      <hr>
+
+

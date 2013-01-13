@@ -1,27 +1,8 @@
-class RegistrationsController < Devise::RegistrationsController
-  before_filter :authenticate_user!
+class ApplicationController < ActionController::Base
+  protect_from_forgery
 
-  def index
-    authorize! :index, @user, :message => 'Not authorized as an administrator.'
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-  end
-
-end
-
-  protected
-
-  def after_inactive_sign_up_path_for(resource)
-    # the page prelaunch visitors will see after they request an invitation
-    '/thankyou.html'
-  end
-
-  def after_sign_up_path_for(resource)
-    # the page new users will see after sign up (after launch, when no invitation is needed)
-    redirect_to root_path
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_path, :alert => exception.message
   end
 
 end
