@@ -10,5 +10,10 @@ RailsPrelaunchSignup::Application.routes.draw do
   match 'users/bulk_invite/:quantity' => 'users#bulk_invite', :via => :get, :as => :bulk_invite
   resources :users, :only => [:show, :index] do
     get 'invite', :on => :member
+
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
   end
 end
